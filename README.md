@@ -201,29 +201,6 @@ Mermaid blocks are wrapped automatically.
 
 ---
 
-## How it compares
-
-| | localpages | grip | mkdocs (Material) | VitePress | markserv |
-|---|---|---|---|---|---|
-| Install | `npx` | `pip install` | `pip` + theme | `npm i` + scaffold | `npm i -g` |
-| External API | none | github.com (rate-limited) | none | none | none |
-| Live reload | yes | yes | yes | yes | yes |
-| Static export | one ZIP | no | yes (site dir) | yes (site dir) | no |
-| GitHub fidelity | direct (uses GitHub's CSS) | exact (uses GitHub's API) | theme-dependent | own theme | basic |
-| Mermaid | server-side SVG | no | plugin | plugin | no |
-| Source-file modal | yes | no | no | no | no |
-| Hover anchor preview | yes | no | no | no | no |
-| Print/PDF discipline | yes | basic | depends on theme | basic | no |
-| Multi-page nav | top-level tabs | single page | full sidebar | full sidebar | basic |
-| Search | no | no | yes (plugin) | yes | no |
-| Config files | none | none | `mkdocs.yml` | `.vitepress/config.ts` | none |
-
-`localpages` is the right tool when you have a handful of Markdown files in a project repo and want to read them rendered, share a link with a colleague, or ship a static-HTML snapshot — without inheriting an SSG's structure, themes, and config.
-
-It's **not** the right tool when you have hundreds of pages, need full-text search, want a custom theme, or are building a public documentation site. Reach for VitePress or MkDocs for those.
-
----
-
 ## How it works
 
 `localpages` is a small Node script. The dependency tree is short on purpose:
@@ -249,18 +226,6 @@ If you need to extend it, fork the repo — every feature lives in a single read
 
 ---
 
-## Roadmap
-
-- [ ] Sub-directory navigation (currently only top-level `.md` files appear in the nav bar)
-- [ ] `localpages.config.mjs` for registering markdown-it plugins and theming
-- [ ] Built-in client-side search across pages
-- [ ] Dark-mode toggle
-- [ ] Single-file bundled distribution (`curl … > localpages.mjs`) for air-gapped environments
-
-PRs welcome on the items above. For new features outside this list, please open an issue first.
-
----
-
 ## FAQ
 
 **Is this related to GitHub Pages?**
@@ -279,7 +244,7 @@ Yes — `highlight.js` ships grammars for both. Use ` ```ts `, ` ```tsx `, or ` 
 It should. The watcher uses `fs.watch({ recursive: true })`, supported on Windows since Node 12. Open an issue if a path translation breaks.
 
 **Can I serve a directory with hundreds of `.md` files?**
-You can, but the top nav lists every file and there's no search. Reach for an SSG instead — see "How it compares".
+You can, but the top nav lists every file and there's no search. Reach for an SSG like VitePress or MkDocs instead.
 
 **Does it generate a sitemap, RSS feed, or canonical URLs?**
 No. It's a preview tool, not a publishing pipeline.
@@ -291,7 +256,7 @@ Run with `node …` in a terminal you can watch; rendering errors are logged to 
 
 ## Contributing
 
-PRs welcome on bug fixes, accessibility improvements, and the roadmap items above. For new features, open an issue first to align on scope — `localpages` aims to stay small.
+PRs welcome on bug fixes and accessibility improvements. For new features, open an issue first to align on scope — `localpages` aims to stay small.
 
 ```bash
 git clone https://github.com/mrtnzlml/localpages.git
