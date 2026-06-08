@@ -10,7 +10,7 @@
 
 ```bash
 cd path/to/your/markdown
-npx localpages
+npx github:mrtnzlml/localpages
 ```
 
 Opens at `http://localhost:8000`. Live-reloads on save. Renders entirely in your terminal — no GitHub API, no headless Chrome, no third-party calls.
@@ -80,8 +80,8 @@ Saving a `.md` while a print dialog is open used to slam the dialog shut. `local
 ## Static HTML export
 
 ```bash
-npx localpages --export             # writes ./docs.zip
-npx localpages --export bundle.zip  # custom output path
+npx github:mrtnzlml/localpages --export             # writes ./docs.zip
+npx github:mrtnzlml/localpages --export bundle.zip  # custom output path
 ```
 
 Or while the server is running, visit `http://localhost:8000/__export.zip`.

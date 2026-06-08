@@ -1,6 +1,6 @@
 # Welcome to localpages
 
-This is a small example documentation site. Run `npx localpages` (or `node ../../bin/localpages.mjs` from the repo root) inside this directory to see it rendered.
+This is a small example documentation site. Run `npx github:mrtnzlml/localpages` (or `node ../../bin/localpages.mjs` from the repo root) inside this directory to see it rendered.
 
 ## What's here
 
