@@ -2,8 +2,7 @@
 
 **Preview Markdown like GitHub renders it — locally, with one command.**
 
-[![npm version](https://img.shields.io/npm/v/localpages.svg)](https://www.npmjs.com/package/localpages)
-[![license](https://img.shields.io/npm/l/localpages.svg)](LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node.js >= 20](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](https://nodejs.org/)
 
 <!-- TODO: hero screenshot — three-up: live preview, hover anchor card, source-file modal -->
