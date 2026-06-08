@@ -1,0 +1,15 @@
+node_modules/
+*.log
+npm-debug.log*
+.npm
+.DS_Store
+.env
+.env.*
+.vscode/
+.idea/
+coverage/
+dist/
+build/
+
+# Default --export output
+docs.zip
